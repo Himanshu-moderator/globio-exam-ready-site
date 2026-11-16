@@ -37,8 +37,8 @@ if (!window._flutter) {
 _flutter.buildConfig = {"engineRevision":"18818009497c581ede5d8a3b8b833b81d00cebb7","builds":[{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"}],"useLocalCanvasKit":true};
 
 
+// Serve the engine's fallback font (Roboto) from this site instead of
+// fonts.gstatic.com, so the app makes no third-party requests (see CSP).
 _flutter.loader.load({
-  serviceWorkerSettings: {
-    serviceWorkerVersion: "1430995491"
-  }
+  config: { fontFallbackBaseUrl: "fonts/" },
 });

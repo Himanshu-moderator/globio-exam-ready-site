@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/globio-exam-ready-site/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Am I exam-ready? A short A1 German readiness check for Goethe and ÖSD exams, by Globio.">
+  <meta name="theme-color" content="#181C7B">
+  <!-- Everything is served from this site: no third-party scripts, no network calls with user data. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Am I exam-ready?">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Am I exam-ready? · Globio</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    /* Pre-boot screen: same gradient as the Flutter splash, so there is no white flash. */
+    html, body { margin: 0; height: 100%; background: #181C7B; }
+    #boot {
+      position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(150deg, #181C7B 0%, #2328BE 55%, #1217A5 100%);
+      transition: opacity .35s ease;
+    }
+    #boot .bar { width: 120px; height: 4px; border-radius: 999px; background: rgba(255,255,255,.15); overflow: hidden; }
+    #boot .bar i {
+      display: block; width: 40%; height: 100%; border-radius: 999px;
+      background: linear-gradient(90deg, #FFC233, #FFD980);
+      animation: slide 1.1s ease-in-out infinite;
+    }
+    @keyframes slide { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
+  </style>
+</head>
+<body>
+  <div id="boot" aria-label="Loading"><div class="bar"><i></i></div></div>
+  <script src="boot.js"></script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

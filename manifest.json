@@ -1,0 +1,35 @@
+{
+    "name": "Am I exam-ready? · Globio",
+    "short_name": "Exam-ready",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#181C7B",
+    "theme_color": "#181C7B",
+    "description": "A1 German readiness check for Goethe and ÖSD exams.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
